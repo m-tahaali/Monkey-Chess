@@ -1,0 +1,153 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Monkey Chess</title>
+  <meta name="description" content="Monkey Chess">
+  <meta name="author" content="Muhammad Taha Ali">
+  <link href="assets/comicSans.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="assets/favicon.png" type="image/png">
+</head>
+
+<body>
+  <div class="popup hidden" id="infoPopup" onclick="closePopup()">
+    <div class="card" onclick="event.stopPropagation()">
+      <div class="title">
+        <span>Monkey Chess</span>
+        <button class="closeBtn btn" onclick="closePopup()">X
+        </button>
+      </div>
+      <div class="content">
+        Welcome to Monkey Chess!
+        <br><br>
+        In this game, the main goal is to capture both the enemy King and enemy Queen, putting them in jail. To achieve
+        this, you need to know the rules of the game and how each piece works.
+        <br><br>
+        Let me explain the rules of the game to you:
+        <ul>
+          <li>
+            <b>Fish:</b> This piece can move one space in any direction except backwards and can only take pieces on a
+            diagonal.
+            When it reaches the end of the board, it becomes a Fishy Queen.
+          </li>
+          <li>
+            <b>Elephant:</b> The Elephant moves exactly two spaces in each diagonal direction and takes only the piece
+            landed
+            on.
+            It cannot jump over pieces.
+          </li>
+          <li>
+            <b>Rook:</b> This piece can move to any free space on the board and can only take pieces exactly one space
+            from it
+            horizontally or vertically. Pieces can only be taken by the Rook if a friendly piece was taken the previous
+            turn.
+          </li>
+          <li>
+            <b>Monkey:</b> The Monkey can move exactly one space horizontally, vertically or diagonally, and can swing
+            over
+            pieces.
+            If there is any piece of any color where a Monkey can normally move, it will swing over the piece, placing
+            the
+            Monkey on the other side of the piece. As long as there are pieces to swing over, the Monkey can swing
+            forever.
+            If an enemy piece is on the other side, that piece is taken. Monkey swinging ends when a piece is taken or
+            when
+            its space is double-clicked.
+          </li>
+          <li>
+            <b>Fishy Queen:</b> This piece can move any amount in any direction horizontally, diagonally or vertically.
+            There
+            are
+            no special conditions when it is taken.
+          </li>
+          <li>
+            <b>Queen:</b> This piece can move any amount in any cardinal or diagonal direction. If captured, the player
+            who
+            captured it puts it in jail on their right of the board.
+          </li>
+          <li>
+            <b>King:</b> This piece can move one space in any cardinal or diagonal direction. If captured, the player
+            who
+            captured
+            it puts it in jail on their right of the board. The King starts the game holding the banana. While holding a
+            banana, the King can be saved by the Monkey. If the Monkey is adjacent to the King's jail space, it can
+            swing
+            horizontally into the jail space, rescuing the King. The King loses the banana when this happens and can
+            never
+            recover it. The Monkey must be able to continue swinging after this, or the King cannot be saved. This does
+            not
+            apply to the Queen as she does not have a banana.
+          </li>
+          <li>
+            <b>Bear:</b> This piece can be controlled by both players and starts the game in the center of the board,
+            where
+            D4/E5
+            intersect. It can move to D4, D5, E4 or E5 on its initial movement, and otherwise moves one space in any
+            cardinal or horizontal direction. Note that the Bear cannot take pieces, but can be taken and swung over.
+          </li>
+        </ul>
+        I would like to give credit to <a href="https://www.youtube.com/@OatsJenkins"
+          style="color:black;font-weight: bold;">Oats Jenkins</a> for the idea of this game. You can check out his <a
+          href="https://www.youtube.com/watch?v=mcivL8u176Y" style="color:black;font-weight: bold;">video</a> or
+        play <a href="https://oatsjenkins.com/chess-2/" style="color:black;font-weight: bold;">his version of the
+          game</a>.
+        <br><br>
+        Good luck, and have fun playing!
+      </div>
+    </div>
+  </div>
+  <div class="popup hidden" id="Dialogue" onclick="closePopup()">
+    <div class="card" onclick="event.stopPropagation()">
+      <div class="title">
+        <span>Dialogue Title</span>
+        <button class="closeBtn btn" onclick="closePopup()">X
+        </button>
+      </div>
+      <div class="content">
+        Dialogue Content
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="side">
+      <div class="header">
+        <div class="logo">
+          <img src="assets/White Fish Queen.svg">
+          Monkey Chess
+        </div>
+        <button class="chessBtn desk-hidden" onclick="toggleChess()"></button>
+      </div>
+      <div class="control">
+        <button class="btn">
+          Play
+        </button>
+        <button class="btn">
+          Info
+        </button>
+      </div>
+      <div class="Colors">
+        <div class="current white hidden">
+          Current Player
+        </div>
+        <div>
+          Made By Muhammad Taha Ali
+        </div>
+      </div>
+    </div>
+    <div class="game mob-hidden">
+      <button class="menuBtn desk-hidden" onclick="toggleChess()"></button>
+      <div class="board">
+      </div>
+    </div>
+  </main>
+  <script src="script.js"></script>
+  <script src="ai.js"></script>
+</body>
+
+</html>

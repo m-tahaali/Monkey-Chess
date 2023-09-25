@@ -1,0 +1,1116 @@
+a[href="https://www.000webhost.com/?utm_source=000webhostapp&utm_campaign=000_logo&utm_medium=website&utm_content=footer_img"] {
+	display: none;
+}
+
+body {
+	background-color: #231F20;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Comic Sans MS";
+	color: white;
+}
+
+main {
+	width: calc(100% - 40px);
+	max-width: calc(120vh + 260px);
+	height: calc(100% - 40px);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
+	gap: 20px;
+	overflow: hidden;
+}
+
+.btn {
+	background: #455A64;
+	border: none;
+	border-radius: 10px;
+	cursor: pointer;
+	color: white;
+	font-size: 2em;
+	padding: 10 0;
+}
+
+.btn:hover {
+	background: #283941;
+}
+
+.popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #0004;
+	backdrop-filter: blur(2px);
+	z-index: 250;
+	cursor: pointer;
+}
+
+.popup .card {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: calc(60% - 40px);
+	height: calc(80% - 40px);
+	padding: 20px;
+	overflow: hidden;
+	background: #BFBFBF;
+	color: black;
+	border-radius: 20px;
+	z-index: 251;
+	cursor: default;
+}
+
+.card .title {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	height: 60px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card .title span {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	flex: 1 0 auto;
+}
+
+
+#Dialogue.popup .card {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: calc(90% - 40px);
+	max-width: 400px;
+	height: auto;
+	padding: 20px;
+	overflow: hidden;
+	background: #BFBFBF;
+	color: black;
+	border-radius: 20px;
+	z-index: 251;
+	cursor: default;
+}
+
+#Dialogue.popup .btn {
+	font-size: 1.25em;
+	padding: 10px;
+}
+
+.closeBtn {
+	height: 60px;
+	width: 60px;
+	cursor: pointer;
+	color: #fff;
+	font-size: 48px;
+	border: none;
+	border-radius: 20px;
+	padding: 0;
+}
+
+.card .content {
+	width: 100%;
+	margin-top: 80px;
+	height: calc(100% - 80px);
+	font-size: 1.5em;
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+.card .content::-webkit-scrollbar {
+	width: 10px;
+	background-color: #BFBFBF;
+	border-radius: 5px;
+}
+
+.card .content::-webkit-scrollbar-thumb {
+	background-color: #455A64;
+	border-radius: 5px;
+}
+
+.card .content::-webkit-scrollbar-track {
+	background-color: #BFBFBF;
+	border-radius: 5px;
+}
+
+
+.popup.hidden {
+	display: none;
+}
+
+.game {
+	aspect-ratio: 12/10;
+	flex: 1 0 auto;
+	max-height: 100%;
+	max-width: calc(100% - 320px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.game .menuBtn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	height: 72px;
+	width: 72px;
+	cursor: pointer;
+	background: url("assets/Menu.svg");
+	background-size: cover;
+	border: none;
+	padding: 0;
+}
+
+.game .board {
+	height: 100%;
+	aspect-ratio: 12/10;
+	position: relative;
+}
+
+.game .board::before {
+	height: 100%;
+	aspect-ratio: 12/10;
+	background: url("assets/Chess Board.svg");
+	background-size: cover;
+	position: absolute;
+	content: "";
+}
+
+.game .board[player="black"]::before {
+	transform: rotate(180deg);
+}
+
+.piece[type="blackfish"] {
+	background: url("assets/Black\ Fish.svg");
+}
+
+.piece[type="whitefish"] {
+	background: url("assets/White\ Fish.svg");
+}
+
+.piece[type="blackfishqueen"] {
+	background: url("assets/Black Fish Queen.svg");
+}
+
+.piece[type="whitefishqueen"] {
+	background: url("assets/White Fish Queen.svg");
+}
+
+.piece[type="blackqueen"] {
+	background: url("assets/Black Queen.svg");
+}
+
+.piece[type="whitequeen"] {
+	background: url("assets/White Queen.svg");
+}
+
+.piece[type="blackking"] {
+	background: url("assets/Black King.svg");
+}
+
+.piece[type="whiteking"] {
+	background: url("assets/White King.svg");
+}
+
+.piece[type="blackbananaking"] {
+	background: url("assets/Black Banana King.svg");
+}
+
+.piece[type="whitebananaking"] {
+	background: url("assets/White Banana King.svg");
+}
+
+.piece[type="blackmonkey"] {
+	background: url("assets/Black Monkey.svg");
+}
+
+.piece[type="whitemonkey"] {
+	background: url("assets/White Monkey.svg");
+}
+
+.piece[type="blackelephant"] {
+	background: url("assets/Black Elephant.svg");
+}
+
+.piece[type="whiteelephant"] {
+	background: url("assets/White Elephant.svg");
+}
+
+.piece[type="blackrook"] {
+	background: url("assets/Black Rook.svg");
+}
+
+.piece[type="whiterook"] {
+	background: url("assets/White Rook.svg");
+}
+
+.piece[type="bear"] {
+	background: url("assets/Bear.svg");
+}
+
+.piece[position="uninit"] {
+	left: calc(275% / 6);
+	top: 45%;
+}
+
+.board .piece,
+.board .motion {
+	aspect-ratio: 1/1;
+	height: 8%;
+	margin: 1%;
+	position: absolute;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+
+.board .motion {
+	border-radius: 50%;
+	background: radial-gradient(#0003 40%, transparent 50%);
+	height: 10%;
+	margin: 0;
+	z-index: 2;
+}
+
+.board .motion.hidden {
+	display: none !important;
+}
+
+.board[player="white"] *[position="a1"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="white"] *[position="a2"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="white"] *[position="a3"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="white"] *[position="a4"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="white"] *[position="a5"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="white"] *[position="a6"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="white"] *[position="a7"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="white"] *[position="a8"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="white"] *[position="b1"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="white"] *[position="b2"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="white"] *[position="b3"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="white"] *[position="b4"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="white"] *[position="b5"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="white"] *[position="b6"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="white"] *[position="b7"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="white"] *[position="b8"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="white"] *[position="c1"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="white"] *[position="c2"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="white"] *[position="c3"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="white"] *[position="c4"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="white"] *[position="c5"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="white"] *[position="c6"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="white"] *[position="c7"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="white"] *[position="c8"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="white"] *[position="d1"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="white"] *[position="d2"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="white"] *[position="d3"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="white"] *[position="d4"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="white"] *[position="d5"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="white"] *[position="d6"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="white"] *[position="d7"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="white"] *[position="d8"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="white"] *[position="e1"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="white"] *[position="e2"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="white"] *[position="e3"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="white"] *[position="e4"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="white"] *[position="e5"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="white"] *[position="e6"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="white"] *[position="e7"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="white"] *[position="e8"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="white"] *[position="f1"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="white"] *[position="f2"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="white"] *[position="f3"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="white"] *[position="f4"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="white"] *[position="f5"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="white"] *[position="f6"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="white"] *[position="f7"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="white"] *[position="f8"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="white"] *[position="g1"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="white"] *[position="g2"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="white"] *[position="g3"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="white"] *[position="g4"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="white"] *[position="g5"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="white"] *[position="g6"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="white"] *[position="g7"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="white"] *[position="g8"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="white"] *[position="h1"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="white"] *[position="h2"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="white"] *[position="h3"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="white"] *[position="h4"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="white"] *[position="h5"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="white"] *[position="h6"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="white"] *[position="h7"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="white"] *[position="h8"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="white"] *[position="whitejail1"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 11);
+}
+
+.board[player="white"] *[position="whitejail2"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 11);
+}
+
+.board[player="white"] *[position="blackjail1"] {
+	bottom: 50%;
+	left: 0;
+}
+
+.board[player="white"] *[position="blackjail2"] {
+	bottom: 40%;
+	left: 0;
+}
+
+.board[player="black"] *[position="blackjail2"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 11);
+}
+
+.board[player="black"] *[position="blackjail1"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 11);
+}
+
+.board[player="black"] *[position="whitejail2"] {
+	bottom: 50%;
+	left: 0;
+}
+
+.board[player="black"] *[position="whitejail1"] {
+	bottom: 40%;
+	left: 0;
+}
+
+.board[player="black"] *[position="a1"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="black"] *[position="a2"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="black"] *[position="a3"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="black"] *[position="a4"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="black"] *[position="a5"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="black"] *[position="a6"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="black"] *[position="a7"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="black"] *[position="a8"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 9);
+}
+
+.board[player="black"] *[position="b1"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="black"] *[position="b2"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="black"] *[position="b3"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="black"] *[position="b4"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="black"] *[position="b5"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="black"] *[position="b6"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="black"] *[position="b7"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="black"] *[position="b8"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 8);
+}
+
+.board[player="black"] *[position="c1"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="black"] *[position="c2"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="black"] *[position="c3"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="black"] *[position="c4"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="black"] *[position="c5"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="black"] *[position="c6"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="black"] *[position="c7"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="black"] *[position="c8"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 7);
+}
+
+.board[player="black"] *[position="d1"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="black"] *[position="d2"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="black"] *[position="d3"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="black"] *[position="d4"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="black"] *[position="d5"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="black"] *[position="d6"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="black"] *[position="d7"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="black"] *[position="d8"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 6);
+}
+
+.board[player="black"] *[position="e1"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="black"] *[position="e2"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="black"] *[position="e3"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="black"] *[position="e4"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="black"] *[position="e5"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="black"] *[position="e6"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="black"] *[position="e7"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="black"] *[position="e8"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 5);
+}
+
+.board[player="black"] *[position="f1"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="black"] *[position="f2"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="black"] *[position="f3"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="black"] *[position="f4"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="black"] *[position="f5"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="black"] *[position="f6"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="black"] *[position="f7"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="black"] *[position="f8"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 4);
+}
+
+.board[player="black"] *[position="g1"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="black"] *[position="g2"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="black"] *[position="g3"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="black"] *[position="g4"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="black"] *[position="g5"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="black"] *[position="g6"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="black"] *[position="g7"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="black"] *[position="g8"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 3);
+}
+
+.board[player="black"] *[position="h1"] {
+	bottom: 80%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="black"] *[position="h2"] {
+	bottom: 70%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="black"] *[position="h3"] {
+	bottom: 60%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="black"] *[position="h4"] {
+	bottom: 50%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="black"] *[position="h5"] {
+	bottom: 40%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="black"] *[position="h6"] {
+	bottom: 30%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="black"] *[position="h7"] {
+	bottom: 20%;
+	left: calc(100% / 12 * 2);
+}
+
+.board[player="black"] *[position="h8"] {
+	bottom: 10%;
+	left: calc(100% / 12 * 2);
+}
+
+.side {
+	height: 100%;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.side .header {
+	width: 100%;
+	display: flex;
+	font-size: 2em;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.side .header .logo img {
+	height: 72px;
+}
+
+.side .header .logo {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.side .header .chessBtn {
+	border: none;
+	height: 72px;
+	aspect-ratio: 12/10;
+	cursor: pointer;
+	padding: 0;
+	background: url("assets/Chess Board.svg");
+	background-size: cover;
+}
+
+.side .control {
+	width: calc(100% - 50px);
+	border-radius: 10px;
+	background: #BFBFBF;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 25px;
+	padding: 25px;
+}
+
+.side .Colors {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+	font-size: 2em;
+}
+
+.side .Colors div {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	height: 60px;
+}
+
+.side .Colors .white::before {
+	content: "";
+	width: 50px;
+	height: 50px;
+	background: url("assets/White Fish Queen.svg"), #BFBFBF88;
+	background-size: 60%, contain;
+	background-repeat: no-repeat;
+	background-position: top, center;
+}
+
+.side .Colors .black::before {
+	content: "";
+	width: 50px;
+	height: 50px;
+	background: url("assets/Black Fish Queen.svg"), #BFBFBF88;
+	background-size: 60%, contain;
+	background-repeat: no-repeat;
+	background-position: top, center;
+}
+
+.side .Colors .hidden {
+	display: none;
+}
+
+@media screen and (max-width:768px) {
+	main {
+		width: calc(100% - 20px);
+		height: calc(100% - 20px);
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 10px;
+		gap: 10px;
+		overflow: hidden;
+	}
+
+	.side {
+		width: 100%;
+	}
+
+	.side .header {
+		font-size: 1.5em;
+	}
+
+	.side .Colors {
+		font-size: 1.5em;
+	}
+
+	.side .header .logo img {
+		height: 40px;
+	}
+
+	.side .header .chessBtn {
+		height: 40px;
+	}
+
+	.game .menuBtn {
+		top: 10px;
+		right: 10px;
+		height: 40px;
+		width: 40px;
+	}
+
+	.game {
+		max-width: unset;
+	}
+
+	.mob-hidden {
+		display: none !important;
+	}
+
+	.popup .card {
+		width: 80%;
+		height: 80%;
+	}
+}
+
+@media screen and (min-width:769px) {
+	.desk-hidden {
+		display: none !important;
+	}
+}
